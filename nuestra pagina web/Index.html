@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Criollo | Restaurante</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="#inicio" class="logo">🍽️ Sabor Criollo</a>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#pedido">🛒 Carrito (<span id="cantidad">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada" id="inicio">
+            <div class="contenido-portada">
+                <p class="etiqueta">SABOR Y TRADICIÓN</p>
+                <h1>Bienvenido a<br>Sabor Criollo</h1>
+                <p>
+                    Disfruta de deliciosos platos preparados
+                    con ingredientes frescos y mucho cariño.
+                </p>
+                <a href="#menu" class="boton">Ver nuestro menú</a>
+            </div>
+        </section>
+
+        <section class="seccion menu" id="menu">
+            <h2>Nuestro menú</h2>
+            <p class="descripcion">
+                Encuentra tu comida favorita y disfruta cada bocado.
+            </p>
+
+            <div class="productos">
+
+                <article class="tarjeta">
+                    <img src="imagenes/pizza.png" alt="Pizza con queso y pepperoni">
+                    <div class="tarjeta-contenido">
+                        <h3>Pizza de la casa</h3>
+                        <p>
+                            Pizza con queso derretido, salsa de tomate
+                            y deliciosos ingredientes.
+                        </p>
+                        <div class="precio-boton">
+                            <span>S/ 25.00</span>
+                            <button onclick="agregarProducto('Pizza de la casa', 25)">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="imagenes/restaurante.png" alt="Ambiente de nuestro restaurante">
+                    <div class="tarjeta-contenido">
+                        <h3>Especial criollo</h3>
+                        <p>
+                            Una opción especial para disfrutar
+                            de una comida deliciosa.
+                        </p>
+                        <div class="precio-boton">
+                            <span>S/ 18.00</span>
+                            <button onclick="agregarProducto('Especial criollo', 18)">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="imagen-emoji">🍔</div>
+                    <div class="tarjeta-contenido">
+                        <h3>Hamburguesa especial</h3>
+                        <p>
+                            Hamburguesa con queso, verduras
+                            frescas y nuestra salsa especial.
+                        </p>
+                        <div class="precio-boton">
+                            <span>S/ 15.00</span>
+                            <button onclick="agregarProducto('Hamburguesa especial', 15)">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="seccion nosotros" id="nosotros">
+            <div>
+                <p class="etiqueta">CONÓCENOS</p>
+                <h2>Sobre nosotros</h2>
+                <p>
+                    En Sabor Criollo queremos ofrecer una experiencia
+                    agradable a nuestros clientes. Nos esforzamos por
+                    brindar buena atención, platos deliciosos y un
+                    ambiente acogedor para compartir en familia
+                    y con amigos.
+                </p>
+            </div>
+            <div class="icono-nosotros">👨‍🍳</div>
+        </section>
+
+        <section class="seccion pedido" id="pedido">
+            <h2>Tu pedido</h2>
+            <p class="descripcion">Revisa los productos que elegiste.</p>
+
+            <div id="lista-carrito" class="lista-carrito">
+                <p class="vacio">Tu carrito está vacío 🛒</p>
+            </div>
+
+            <div class="total">
+                <strong>Total:</strong>
+                <strong id="total">S/ 0.00</strong>
+            </div>
+
+            <button class="boton finalizar" onclick="finalizarPedido()">
+                Finalizar pedido
+            </button>
+        </section>
+
+        <section class="seccion contacto" id="contacto">
+            <h2>Contáctanos</h2>
+            <p>¡Nos encantará atenderte!</p>
+            <p>📍 Cusco, Perú</p>
+            <p>🍽️ Sabor Criollo, sabor que se comparte</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Sabor Criollo | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="codigo.js"></script>
+</body>
+</html>
